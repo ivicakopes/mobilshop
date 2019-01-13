@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
-//import firebase from 'react-native-firebase';
+import firebase from 'react-native-firebase';
 
 class Login extends React.Component {
-   /* state = { 
+   state = { 
      email: '', 
      password: '',      
  }
@@ -14,12 +14,12 @@ class Login extends React.Component {
        .signInWithEmailAndPassword(email, password)
        .then(() => this.props.navigation.navigate('Main'))
        .catch(error => this.setState({ errorMessage: error.message }))
-   } */
+   }
 
    
 
 
-  /* render() {
+  render() {
     return (
       <View style={styles.container}>
         <Text>Login</Text>
@@ -50,8 +50,8 @@ class Login extends React.Component {
       </View>
     )
   }
-} */
-render() {
+} 
+/* render() {
   return (
     <View style={styles.container}>
       <Text>LOGIN</Text>
@@ -74,7 +74,7 @@ render() {
     </View>
   )
 }
-}
+} */
 const styles = StyleSheet.create({
   container: {
     flex: 1,

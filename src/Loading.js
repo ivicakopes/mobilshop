@@ -1,20 +1,24 @@
 import React,{ Component } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet, Button } from 'react-native';
-//import firebase from 'react-native-firebase';
+import firebase from 'react-native-firebase';
 
 class Loading extends React.Component {
-  /* componentDidMount() {
+  componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
       this.props.navigation.navigate(user ? 'Main' : 'SignUp')
     })
-  } */
-  /*  <View style={styles.container}>
+  }
+  
+  render() {
+    return (
+      <View style={styles.container}>
         <Text>Loading</Text>
         <ActivityIndicator size="large" />
       </View>
-    ) */
-  
-   render() {
+    )
+  }
+} 
+   /* render() {
     return (
       <View style={styles.container}>
       <Text>LOADING</Text>
@@ -37,7 +41,7 @@ class Loading extends React.Component {
       </View>
     )
   }
-}
+} */
 const styles = StyleSheet.create({
   container: {
     flex: 1,

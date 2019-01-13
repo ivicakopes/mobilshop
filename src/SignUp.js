@@ -1,17 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
-//import firebase from 'react-native-firebase';
+import firebase from 'react-native-firebase';
 
 class SignUp extends React.Component {
-  /* state = { email: '', password: '', errorMessage: null }
+  state = { email: '', password: '', errorMessage: null }
   handleSignUp = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then(() => this.props.navigation.navigate('Main'))
       .catch(error => this.setState({ errorMessage: error.message }))
-  } */
-/* render() {
+  }
+render() {
     return (
       <View style={styles.container}>
         <Text>Sign Up</Text>
@@ -45,8 +45,8 @@ class SignUp extends React.Component {
       </View>
     )
   }
-} */
-render() {
+} 
+/* render() {
   return (
     <View style={styles.container}>
     <Text>SIGNUP</Text>
@@ -69,7 +69,7 @@ render() {
     </View>
   )
 }
-}
+} */
 
 const styles = StyleSheet.create({
    container: {
