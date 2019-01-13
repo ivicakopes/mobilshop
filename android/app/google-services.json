@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1091352333987",
+    "firebase_url": "https://logovanje-e08e9.firebaseio.com",
+    "project_id": "logovanje-e08e9",
+    "storage_bucket": "logovanje-e08e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091352333987:android:b2256f873ca5b7c8",
+        "android_client_info": {
+          "package_name": "com.log"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091352333987-on8she35qale10udtp9lim8nos43fo66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyAsWlhrRmWkjdEDkamQft0MUiXImZKdw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
