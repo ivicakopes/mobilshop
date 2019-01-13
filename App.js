@@ -1,3 +1,8 @@
+
+// NIJE VIŠE POČETNA STRANA, NE KORISTI SE VIŠE 
+
+
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
