@@ -12,7 +12,8 @@ import AddBoardScreen from './AddBoardScreen';
 import EditBoardScreen from './EditBoardScreen'; 
 import Detail from './Detail';
 import Change from './Change';
-//import Menuproba from './Menuproba';
+import Menuproba from './Menuproba';
+
 //import Uploadpic2 from './Uploadpic2';
 //import Uploadpic from './Uploadpic';
 //type Props = {};
@@ -36,7 +37,7 @@ const AppStack = createStackNavigator({
   EditBoard: EditBoardScreen,
   Detail: Detail,
   Change : Change,
-  //Menuproba: Menuproba,
+  Menuproba: Menuproba,
   //Uploadpic2: Uploadpic2,
   //Uploadpic: Uploadpic,
  });

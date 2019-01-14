@@ -3,9 +3,10 @@ import { StyleSheet, ScrollView, ActivityIndicator, View, Text,Image,TouchableOp
 import firebase from 'react-native-firebase';
 import { List, ListItem, Button, icon } from 'react-native-elements';
 //import firebase from '../Firebase';
-//import SideMenu from 'react-native-side-menu';
-//import Menu from './Menu';
-//const image = require('../assets/menu.png');
+import SideMenu from 'react-native-side-menu';
+import Menu from './Menu';
+
+const image = require('../assets/menu.png');
 
 class BoardScreen extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -78,14 +79,43 @@ class BoardScreen extends Component {
   
     render() {
       const { currentUser } = this.state
+      const menu = <Menu onItemSelected={this.onMenuItemSelected} />;
+    if(this.state.isOpen){
+      this.state.isOpenText = 'true';
+    }else{
+      this.state.isOpenText = 'false';
+    }; 
+    if(this.state.isLoading){
+      return(
+        <View style={styles.activity}>
+          <ActivityIndicator size="large" color="#0000ff"/>
+        </View>
+      )
+    }
     return (
-      <ScrollView style={styles.container}>        
+      <SideMenu
+      menu={menu}
+      
+      isOpen={this.state.isOpen}
+      onChange={isOpen => this.updateMenuState(isOpen)}
+    > 
+      <ScrollView style={styles.container}> 
+      <TouchableOpacity
+          onPress={this.toggle}
+         // style={styles.button}
+        >
+          <Image
+            source={image}
+            style={{ width: 32, height: 32 }}
+          />
+          
+        </TouchableOpacity>       
           <Text>
             Pozdrav {currentUser && currentUser.email}!
           </Text>
           <Text>------------------------</Text>
           <Button
-          title="User details !"
+          title="User details !!"
           onPress={() => this.props.navigation.navigate('Detail')}
         />
         <Text>------------------------</Text>
@@ -112,6 +142,7 @@ class BoardScreen extends Component {
         </List>
         
         </ScrollView>
+        </SideMenu>
       )
     }
   } 
