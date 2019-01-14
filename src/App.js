@@ -8,7 +8,7 @@ import Login from './Login'
 import Main from './Main'
 import BoardScreen from './BoardScreen';
 //import BoardDetailScreen from './BoardDetailScreen';
-//import AddBoardScreen from './AddBoardScreen';
+import AddBoardScreen from './AddBoardScreen';
 //import EditBoardScreen from './EditBoardScreen'; 
 import Detail from './Detail';
 import Change from './Change';
@@ -32,7 +32,7 @@ const AppStack = createStackNavigator({
   //Loading: Loading
   Board: BoardScreen,
   //BoardDetails: BoardDetailScreen,  
-  //AddBoard: AddBoardScreen
+  AddBoard: AddBoardScreen,
   //EditBoard: EditBoardScreen,
   Detail: Detail,
   Change : Change,

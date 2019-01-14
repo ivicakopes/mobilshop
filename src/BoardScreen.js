@@ -11,13 +11,13 @@ class BoardScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Board Lista',
-      /* headerRight: (
+      headerRight: (
         <Button
           buttonStyle={{ padding: 0, backgroundColor: 'transparent' }}
           icon={{ name: 'add-circle', style: { marginRight: 0, fontSize: 28,color:'blue' } }}
           onPress={() => { navigation.push('AddBoard') }}
         />
-      ), */
+      ), 
       
     };
   }; 
