@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet,Button, ScrollView, ActivityIndicator, View, Text,Image,TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, ActivityIndicator, View, Text,Image,TouchableOpacity } from 'react-native';
 import firebase from 'react-native-firebase';
-//import { List, ListItem, Button, Icon } from 'react-native-elements';
+import { List, ListItem, Button, icon } from 'react-native-elements';
 //import firebase from '../Firebase';
 //import SideMenu from 'react-native-side-menu';
 //import Menu from './Menu';
@@ -91,7 +91,8 @@ class BoardScreen extends Component {
         />
         <Text>------------------------</Text>
          <Button
-          title="Change Email & Pass"
+          icon={{name: 'cached'}}
+          title="Change Email & Password !"
           onPress={() => this.props.navigation.navigate('Change')}
         /> 
         </View>
