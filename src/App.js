@@ -7,9 +7,9 @@ import SignUp from './SignUp'
 import Login from './Login'
 import Main from './Main'
 import BoardScreen from './BoardScreen';
-//import BoardDetailScreen from './BoardDetailScreen';
+import BoardDetailScreen from './BoardDetailScreen';
 import AddBoardScreen from './AddBoardScreen';
-//import EditBoardScreen from './EditBoardScreen'; 
+import EditBoardScreen from './EditBoardScreen'; 
 import Detail from './Detail';
 import Change from './Change';
 //import Menuproba from './Menuproba';
@@ -31,9 +31,9 @@ const Apps = createSwitchNavigator(
 const AppStack = createStackNavigator({ 
   //Loading: Loading
   Board: BoardScreen,
-  //BoardDetails: BoardDetailScreen,  
+  BoardDetails: BoardDetailScreen,  
   AddBoard: AddBoardScreen,
-  //EditBoard: EditBoardScreen,
+  EditBoard: EditBoardScreen,
   Detail: Detail,
   Change : Change,
   //Menuproba: Menuproba,

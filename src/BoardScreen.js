@@ -25,7 +25,7 @@ class BoardScreen extends Component {
   constructor() {
     super();
     this.toggle = this.toggle.bind(this);
-    //this.ref = firebase.firestore().collection('boards');
+    this.ref = firebase.firestore().collection('boards');
     this.unsubscribe = null;
     this.state = {
       currentUser: null,
@@ -36,10 +36,7 @@ class BoardScreen extends Component {
       boards: []
     };
   }
-  componentDidMount() {
-    const { currentUser } = firebase.auth()
-    this.setState({ currentUser })
-} 
+  
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
@@ -55,10 +52,12 @@ class BoardScreen extends Component {
       isOpen: false,
       selectedItem: item,
     });
-  /* componentDidMount() {
+  componentDidMount() {
+    const { currentUser } = firebase.auth()
+    this.setState({ currentUser })
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
-  } */
-  /* onCollectionUpdate = (querySnapshot) => {
+  } 
+  onCollectionUpdate = (querySnapshot) => {
     const boards = [];
     querySnapshot.forEach((doc) => {
       const { title, description, author } = doc.data();
@@ -74,13 +73,13 @@ class BoardScreen extends Component {
       boards,
       isLoading: false,
    });
-  } */
+  } 
  
   
     render() {
       const { currentUser } = this.state
-  return (
-        <View style={styles.container}>
+    return (
+      <ScrollView style={styles.container}>        
           <Text>
             Pozdrav {currentUser && currentUser.email}!
           </Text>
@@ -95,7 +94,24 @@ class BoardScreen extends Component {
           title="Change Email & Password !"
           onPress={() => this.props.navigation.navigate('Change')}
         /> 
-        </View>
+        <List>
+          {
+            this.state.boards.map((item, i) => (
+              <ListItem
+                key={i}
+                title={item.title}
+                leftIcon={{name: 'cached'}}
+                onPress={() => {
+                  this.props.navigation.navigate('BoardDetails', {
+                    boardkey: `${JSON.stringify(item.key)}`,
+                  });
+                }}
+              />
+            ))
+          }
+        </List>
+        
+        </ScrollView>
       )
     }
   } 
