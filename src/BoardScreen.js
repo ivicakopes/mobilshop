@@ -118,7 +118,7 @@ class BoardScreen extends Component {
         <Text>------------------------</Text>
 
         <Button
-          title="User details !!"
+          title="User details !"
           onPress={() => this.props.navigation.navigate('Detail')}
         />
 
@@ -134,7 +134,7 @@ class BoardScreen extends Component {
 
         <Button
           icon={{name: 'cached'}}
-          title="Upload Picture !!!"
+          title="Upload Picture !"
           onPress={() => this.props.navigation.navigate('Uploadpic')}
         /> 
 
