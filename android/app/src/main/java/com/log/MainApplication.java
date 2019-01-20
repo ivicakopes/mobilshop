@@ -8,6 +8,7 @@ import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage; // <-- Add this line za auth
 import io.invertase.firebase.firestore.RNFirebaseFirestorePackage; // <-- Add this line za firestore
+import io.invertase.firebase.storage.RNFirebaseStoragePackage; //Add this for storage
 import com.oblador.vectoricons.VectorIconsPackage;//<-- Add this for vector icons
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
@@ -30,13 +31,14 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNFetchBlobPackage(),
-            new PickerPackage(),
+          new RNFetchBlobPackage(),
+          new PickerPackage(),
           new RNFirebasePackage(),
           new RNGestureHandlerPackage(),
           new RNFirebaseAuthPackage(), // <-- Add this line za auth
           new RNFirebaseFirestorePackage(), // <-- Add this line za firestore
-          new VectorIconsPackage() //<-- Add this for vector icons
+          new VectorIconsPackage(), //<-- Add this for vector icons
+          new RNFirebaseStoragePackage() //Add this for storage
       );
     }
 
