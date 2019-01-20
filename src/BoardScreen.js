@@ -134,7 +134,7 @@ class BoardScreen extends Component {
 
         <Button
           icon={{name: 'cached'}}
-          title="Upload Picture !"
+          title="Upload Picture !!!"
           onPress={() => this.props.navigation.navigate('Uploadpic')}
         /> 
 
