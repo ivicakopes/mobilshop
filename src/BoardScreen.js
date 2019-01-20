@@ -100,30 +100,46 @@ class BoardScreen extends Component {
       onChange={isOpen => this.updateMenuState(isOpen)}
     > 
       <ScrollView style={styles.container}> 
-      <TouchableOpacity
-          onPress={this.toggle}
-         // style={styles.button}
-        >
-          <Image
-            source={image}
-            style={{ width: 32, height: 32 }}
-          />
-          
-        </TouchableOpacity>       
-          <Text>
+        <TouchableOpacity
+            onPress={this.toggle}
+          // style={styles.button}
+          >
+            <Image
+              source={image}
+              style={{ width: 32, height: 32 }}
+            />          
+        </TouchableOpacity>  
+
+        <Text>------------------------</Text>
+        <Text>
             Pozdrav {currentUser && currentUser.email}!
-          </Text>
-          <Text>------------------------</Text>
-          <Button
+        </Text>
+
+        <Text>------------------------</Text>
+
+        <Button
           title="User details !!"
           onPress={() => this.props.navigation.navigate('Detail')}
         />
+
         <Text>------------------------</Text>
-         <Button
+
+        <Button
           icon={{name: 'cached'}}
           title="Change Email & Password !"
           onPress={() => this.props.navigation.navigate('Change')}
         /> 
+
+        <Text>------------------------</Text>
+
+        <Button
+          icon={{name: 'cached'}}
+          title="Upload Picture !"
+          onPress={() => this.props.navigation.navigate('Uploadpic')}
+        /> 
+
+        <Text>------------------------</Text> 
+        
         <List>
           {
             this.state.boards.map((item, i) => (

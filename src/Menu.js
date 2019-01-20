@@ -26,13 +26,13 @@ export default function Menu({ onItemSelected }) {
       </View>
 
       <Text
-        onPress={() => { navigation.push('AddBoard') }}
-        //onPress={() => onItemSelected('About')}
+        //onPress={() => { navigation.push('AddBoard') }}
+        onPress={() => onItemSelected('AddBoard')}
         style={styles.item}
       >
         User Detail
       </Text>
-      
+
       <Text>********************</Text>
 
       <Text

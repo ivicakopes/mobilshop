@@ -6,6 +6,7 @@ import com.facebook.react.ReactApplication;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage; // <-- Add this line za auth
 import io.invertase.firebase.firestore.RNFirebaseFirestorePackage; // <-- Add this line za firestore
+import com.oblador.vectoricons.VectorIconsPackage;//<-- Add this for vector icons
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -30,7 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNFirebasePackage(),
           new RNGestureHandlerPackage(),
           new RNFirebaseAuthPackage(), // <-- Add this line za auth
-          new RNFirebaseFirestorePackage() // <-- Add this line za firestore
+          new RNFirebaseFirestorePackage(), // <-- Add this line za firestore
+          new VectorIconsPackage() //<-- Add this for vector icons
       );
     }
 

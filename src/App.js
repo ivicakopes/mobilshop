@@ -13,9 +13,10 @@ import EditBoardScreen from './EditBoardScreen';
 import Detail from './Detail';
 import Change from './Change';
 import Menuproba from './Menuproba';
+import Uploadpic from './Uploadpic';
 
 //import Uploadpic2 from './Uploadpic2';
-//import Uploadpic from './Uploadpic';
+
 //type Props = {};
 
 const Apps = createSwitchNavigator(
@@ -37,9 +38,9 @@ const AppStack = createStackNavigator({
   EditBoard: EditBoardScreen,
   Detail: Detail,
   Change : Change,
-  Menuproba: Menuproba,
+  Menuproba: Menuproba,  
+  Uploadpic: Uploadpic,
   //Uploadpic2: Uploadpic2,
-  //Uploadpic: Uploadpic,
  });
 
 export default createAppContainer(createSwitchNavigator(
